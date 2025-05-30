@@ -4,5 +4,9 @@
   "custom_bg_color": "#aa6f16dd",
   "custom_key_color": "#cc32323c",
   "custom_text_color": "#ffffffff",
-  "language": "zh_CN"
+  "language": "zh_CN",
+  "window_x": 732,
+  "window_y": 775,
+  "window_width": 703,
+  "window_height": 277
 }

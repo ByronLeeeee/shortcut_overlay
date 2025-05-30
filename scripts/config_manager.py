@@ -196,6 +196,10 @@ class ConfigManager:
             "custom_key_color": "#CC32323C",  # Default custom key color (Hex ARGB).
             "custom_text_color": "#FFFFFFFF",  # Default custom key text color (Hex ARGB).
             "language": "en_US",  # Default UI language (locale string, e.g., "en_US", "zh_CN").
+            "window_x": None,  # No specific default position, let OS decide initially
+            "window_y": None,
+            "window_width": 850, # Default width
+            "window_height": 280 # Default height
             # Other settings like window position/size can be added here.
         }
 
