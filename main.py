@@ -94,7 +94,7 @@ class ShortcutOverlayApplication(QApplication):
 
         # Initialize and configure the system tray icon.
         self.tray_icon: Optional[QSystemTrayIcon] = None
-        self._initialize_tray_icon_object() # Create the QSystemTrayIcon object.
+        self._initialize_tray_icon_object() # Create the QSystemTrayIcon object
         self._update_tray_icon_ui()         # Populate its UI elements.
 
         # Connect signals and slots for inter-component communication.
