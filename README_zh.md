@@ -51,7 +51,6 @@
     ```bash
     python main.py
     ```
-    (假设 `main.py` 位于克隆的 `shortcut-overlay` 目录的根目录下，并且旁边有一个 `shortcut_overlay` 包文件夹)。
 
 ## 使用指南
 

@@ -51,7 +51,6 @@ The overlay intelligently detects the currently active foreground application on
     ```bash
     python main.py 
     ```
-    (Assuming `main.py` is in the root of the cloned `shortcut-overlay` directory alongside a `shortcut_overlay` package folder).
 
 ## Usage Guide
 
