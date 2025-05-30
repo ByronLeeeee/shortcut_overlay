@@ -157,7 +157,7 @@ class OverlayKeyboardWindow(QWidget):
         "Monochrome": ("rgb(128,128,128)", QColor(156,163,175,195), "#FFFFFF", "#6B7280", "#000000", "#374151", "#111827"),
         "Low Light": ("rgb(15,15,15)", QColor(30,30,30,200), "#DC2626", "#1F2937", "#EF4444", "#F87171", "#FCA5A5"),
         "Blue Light Filter": ("rgb(50,40,30)", QColor(70,60,50,190), "#FEF3C7", "#92400E", "#F59E0B", "#FBBF24", "#FCD34D"),
-        "Accessibility": ("rgb(255,255,255)", QColor(0,0,0,255), "#000000", "#808080", "#0000FF", "#FF0000", "#008000"),
+        "Accessibility": ("rgb(255,255,255)", QColor(150,150,150,220), "#000000", "#808080", "#0000FF", "#FF0000", "#008000"),
     }
 
     def __init__(self, config_manager: ConfigManager, parent: Optional[QWidget] = None):
@@ -294,8 +294,8 @@ class OverlayKeyboardWindow(QWidget):
 
     def update_shortcut_display(self) -> None:
         """
-        Updates shortcut descriptions on keys. If a shortcut is active,
-        its `shortcut_label` background is highlighted immediately.
+        Updates shortcut descriptions on keys. If a shortcut is active due to
+        current modifiers, its `shortcut_label` background is highlighted.
         """
         shortcut_fg_color = self._get_theme_shortcut_fg_color()
         highlight_bg_color = self._get_shortcut_highlight_bg_color()
@@ -314,20 +314,44 @@ class OverlayKeyboardWindow(QWidget):
         current_lang_code: str = self.config_manager.get_setting("language", "en_US").split('_')[0]
         fallback_lang_code: str = "en" if current_lang_code != "en" else "zh"
 
+        # Helper to get the string description from a potentially localized object.
+        def get_final_string_description(description_object: Any) -> str:
+            if isinstance(description_object, str): return description_object
+            if isinstance(description_object, dict):
+                text = description_object.get(current_lang_code)
+                if isinstance(text, str): return text
+                text = description_object.get(fallback_lang_code)
+                if isinstance(text, str): return text
+                try: # Fallback to the first value in the dict if it's a string
+                    first_value = next(iter(description_object.values()))
+                    if isinstance(first_value, str): return first_value
+                except StopIteration: pass # Empty dictionary
+            return "N/A" # Default if no suitable string found
+
+        # Process and highlight shortcuts active with current modifiers.
         if mod_combo_str and mod_combo_str in app_shortcuts:
             shortcuts_for_combo: Dict[str, Union[str, Dict[str, str]]] = app_shortcuts[mod_combo_str]
-            for key_char_upper, desc_obj in shortcuts_for_combo.items():
-                display_text: str = "N/A"
-                if isinstance(desc_obj, dict):
-                    display_text = desc_obj.get(current_lang_code, desc_obj.get(fallback_lang_code, next(iter(desc_obj.values()), "N/A")))
-                elif isinstance(desc_obj, str):
-                    display_text = desc_obj
-                
-                if key_char_upper in self.key_widgets_map:
-                    for widget in self.key_widgets_map[key_char_upper]:
-                        widget.update_shortcut_display(display_text)
-                        # If this shortcut is active, apply highlight style immediately.
-                        widget.shortcut_label.setStyleSheet(highlight_shortcut_label_style)
+            if shortcuts_for_combo: # Check if there are any shortcuts for this combo
+                for key_char_upper, desc_obj in shortcuts_for_combo.items():
+                    display_text = get_final_string_description(desc_obj)
+                    if key_char_upper in self.key_widgets_map:
+                        for widget in self.key_widgets_map[key_char_upper]:
+                            widget.update_shortcut_display(display_text)
+                            # Apply highlight style as these are active due to modifiers.
+                            widget.shortcut_label.setStyleSheet(highlight_shortcut_label_style)
+        
+        # Process "NoModifier" shortcuts, display them only if the key has no other shortcut shown.
+        no_modifier_key_name = "NoModifier"
+        if no_modifier_key_name in app_shortcuts:
+            shortcuts_no_modifier = app_shortcuts[no_modifier_key_name]
+            if shortcuts_no_modifier:
+                for key_char_upper, desc_obj in shortcuts_no_modifier.items():
+                    display_text = get_final_string_description(desc_obj)
+                    if key_char_upper in self.key_widgets_map:
+                        for widget in self.key_widgets_map[key_char_upper]:
+                            if not widget.shortcut_label.text(): 
+                                widget.update_shortcut_display(display_text)
+
     
     @Slot(str)
     def on_active_app_changed(self, app_name: str) -> None:
