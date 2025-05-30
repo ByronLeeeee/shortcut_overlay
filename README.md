@@ -20,7 +20,7 @@ The overlay intelligently detects the currently active foreground application on
 
 ## Prerequisites
 
-*   Python 3.10 +
+*   Python 3.10+
 *   PySide6 (for the Qt GUI)
 *   `keyboard` library (for global keyboard event listening)
 *   `pywin32` (for Windows-specific foreground application monitoring)
@@ -49,21 +49,26 @@ The overlay intelligently detects the currently active foreground application on
 
 4.  **Run the application:**
     ```bash
-    python main.py
+    python main.py 
     ```
+    (Assuming `main.py` is in the root of the cloned `shortcut-overlay` directory alongside a `shortcut_overlay` package folder).
 
-## Configuration
+## Usage Guide
+
+For detailed instructions on how to use the application, including how to configure settings and customize shortcuts, please refer to our **[Usage Guide](./docs/USAGE_GUIDE.md)**.
+
+## Configuration Overview
 
 *   **Shortcuts (`config/shortcuts.json`)**:
     This JSON file defines the shortcuts. The structure is:
     ```json
     {
       "EXECUTABLE_NAME.EXE": {
-        "ModifierKeys": {
-          "Key": "Description (or localized object)" 
+        "ModifierKeys_OR_NoModifier": { 
+          "Key": "Description (or localized object: {\"en\": \"Desc\", \"zh\": \"描述\"})" 
         }
       },
-      "DEFAULT": { /* Global shortcuts */ }
+      "DEFAULT": { /* Global shortcuts applicable to all apps */ }
     }
     ```
     Example:
@@ -72,14 +77,17 @@ The overlay intelligently detects the currently active foreground application on
       "NOTEPAD.EXE": {
         "Ctrl": {
           "S": {"en": "Save File", "zh": "保存文件"}
+        },
+        "NoModifier": {
+          "F1": {"en": "Help", "zh": "帮助"}
         }
       }
     }
     ```
-    Executable names should be in uppercase. Modifiers can be "Ctrl", "Shift", "Alt", "Win", or combinations like "Ctrl+Shift".
+    Executable names should be in **UPPERCASE** (e.g., `NOTEPAD.EXE`). Modifiers can be "Ctrl", "Shift", "Alt", "Win", combinations like "Ctrl+Shift", or "NoModifier" for direct keys.
 
 *   **Settings (`config/settings.json`)**:
-    Stores user preferences like theme, opacity, language, and custom colors. This file is managed by the application.
+    Stores user preferences like theme, opacity, language, and custom colors. This file is primarily managed by the application's settings dialog.
 
 ## How it Works
 
@@ -90,7 +98,7 @@ The overlay intelligently detects the currently active foreground application on
     *   It receives signals about the active app and key events.
     *   It updates the displayed shortcuts on the keys based on the current app and active modifiers.
     *   It applies visual themes and opacity as configured.
-5.  **System Tray Icon**: Provides access to application functions.
+5.  **System Tray Icon**: Provides access to application functions like showing/hiding the overlay, accessing settings, and exiting.
 
 ## Contributing
 

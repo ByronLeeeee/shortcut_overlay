@@ -815,5 +815,281 @@
     "Shift": { 
         "TAB": { "en": "Prev Field", "zh": "上个字段" }
     }
+  },
+  "ADOBE PREMIERE PRO.EXE": {
+    "Ctrl": {
+      "S": { "en": "Save", "zh": "保存" },
+      "O": { "en": "Open Project", "zh": "打开项目" },
+      "N": { "en": "New Project", "zh": "新项目" },
+      "I": { "en": "Import", "zh": "导入" },
+      "Z": { "en": "Undo", "zh": "撤销" },
+      "Y": { "en": "Redo", "zh": "重做" },
+      "A": { "en": "Select All", "zh": "全选" },
+      "C": { "en": "Copy", "zh": "复制" },
+      "V": { "en": "Paste", "zh": "粘贴" },
+      "X": { "en": "Cut", "zh": "剪切" },
+      "K": { "en": "Add Edit", "zh": "添加编辑点" },
+      "T": { "en": "Title Tool", "zh": "标题工具" },
+      "R": { "en": "Speed/Duration", "zh": "速度/持续时间" },
+      "M": { "en": "Add Marker", "zh": "添加标记" }
+    },
+    "Ctrl+Shift": {
+      "S": { "en": "Save As", "zh": "另存为" },
+      "I": { "en": "Media Browser", "zh": "媒体浏览器" },
+      "H": { "en": "Replace Footage", "zh": "替换素材" },
+      "D": { "en": "Default Trans", "zh": "默认转场" },
+      "K": { "en": "Add Through Edit", "zh": "添加穿透编辑" }
+    },
+    "Alt": {
+      "LEFT": { "en": "Previous Edit", "zh": "上一个编辑点" },
+      "RIGHT": { "en": "Next Edit", "zh": "下一个编辑点" }
+    },
+    "NoModifier": {
+      "SPACE": { "en": "Play/Pause", "zh": "播放/暂停" },
+      "J": { "en": "Play Reverse", "zh": "反向播放" },
+      "K": { "en": "Pause", "zh": "暂停" },
+      "L": { "en": "Play Forward", "zh": "正向播放" },
+      "I": { "en": "Mark In", "zh": "标记入点" },
+      "O": { "en": "Mark Out", "zh": "标记出点" },
+      "Q": { "en": "Ripple Trim In", "zh": "波纹修整入点" },
+      "W": { "en": "Ripple Trim Out", "zh": "波纹修整出点" },
+      "V": { "en": "Selection Tool", "zh": "选择工具" },
+      "C": { "en": "Razor Tool", "zh": "剃刀工具" },
+      "HOME": { "en": "Go to Start", "zh": "跳转到开始" },
+      "END": { "en": "Go to End", "zh": "跳转到结束" }
+    }
+  },
+  
+  "AFTERFX.EXE": {
+    "Ctrl": {
+      "S": { "en": "Save", "zh": "保存" },
+      "O": { "en": "Open Project", "zh": "打开项目" },
+      "N": { "en": "New Comp", "zh": "新建合成" },
+      "I": { "en": "Import File", "zh": "导入文件" },
+      "Z": { "en": "Undo", "zh": "撤销" },
+      "Y": { "en": "Redo", "zh": "重做" },
+      "A": { "en": "Select All", "zh": "全选" },
+      "C": { "en": "Copy", "zh": "复制" },
+      "V": { "en": "Paste", "zh": "粘贴" },
+      "X": { "en": "Cut", "zh": "剪切" },
+      "D": { "en": "Duplicate", "zh": "复制" },
+      "K": { "en": "Comp Settings", "zh": "合成设置" },
+      "R": { "en": "Render Queue", "zh": "渲染队列" }
+    },
+    "Ctrl+Shift": {
+      "S": { "en": "Save As", "zh": "另存为" },
+      "C": { "en": "Pre-compose", "zh": "预合成" },
+      "D": { "en": "Split Layer", "zh": "分割图层" },
+      "Y": { "en": "New Solid", "zh": "新建纯色" },
+      "T": { "en": "New Text", "zh": "新建文本" }
+    },
+    "Alt": {
+      "HOME": { "en": "Go to Start", "zh": "跳转到开始" },
+      "END": { "en": "Go to End", "zh": "跳转到结束" }
+    },
+    "NoModifier": {
+      "SPACE": { "en": "Play/Pause", "zh": "播放/暂停" },
+      "0": { "en": "RAM Preview", "zh": "RAM预览" },
+      "P": { "en": "Position", "zh": "位置" },
+      "A": { "en": "Anchor Point", "zh": "锚点" },
+      "S": { "en": "Scale", "zh": "缩放" },
+      "R": { "en": "Rotation", "zh": "旋转" },
+      "T": { "en": "Opacity", "zh": "不透明度" },
+      "U": { "en": "Show Keyframes", "zh": "显示关键帧" },
+      "F": { "en": "Mask Feather", "zh": "遮罩羽化" },
+      "M": { "en": "Mask Path", "zh": "遮罩路径" },
+      "G": { "en": "Pen Tool", "zh": "钢笔工具" },
+      "V": { "en": "Selection Tool", "zh": "选择工具" },
+      "H": { "en": "Hand Tool", "zh": "抓手工具" },
+      "Z": { "en": "Zoom Tool", "zh": "缩放工具" }
+    }
+  },
+
+  "AUDITION.EXE": {
+    "Ctrl": {
+      "S": { "en": "Save", "zh": "保存" },
+      "O": { "en": "Open", "zh": "打开" },
+      "N": { "en": "New", "zh": "新建" },
+      "Z": { "en": "Undo", "zh": "撤销" },
+      "Y": { "en": "Redo", "zh": "重做" },
+      "A": { "en": "Select All", "zh": "全选" },
+      "C": { "en": "Copy", "zh": "复制" },
+      "V": { "en": "Paste", "zh": "粘贴" },
+      "X": { "en": "Cut", "zh": "剪切" },
+      "E": { "en": "Export", "zh": "导出" },
+      "R": { "en": "Record", "zh": "录音" }
+    },
+    "Ctrl+Shift": {
+      "S": { "en": "Save As", "zh": "另存为" },
+      "N": { "en": "New Multitrack", "zh": "新建多轨" },
+      "E": { "en": "Export Multitrack", "zh": "导出多轨" }
+    },
+    "NoModifier": {
+      "SPACE": { "en": "Play/Pause", "zh": "播放/暂停" },
+      "HOME": { "en": "Go to Start", "zh": "跳转到开始" },
+      "END": { "en": "Go to End", "zh": "跳转到结束" },
+      "DELETE": { "en": "Delete", "zh": "删除" },
+      "F": { "en": "Fade In", "zh": "淡入" },
+      "G": { "en": "Fade Out", "zh": "淡出" },
+      "I": { "en": "Zoom In", "zh": "放大" },
+      "O": { "en": "Zoom Out", "zh": "缩小" }
+    }
+  },
+
+  "3DSMAX.EXE": {
+    "Ctrl": {
+      "S": { "en": "Save", "zh": "保存" },
+      "O": { "en": "Open", "zh": "打开" },
+      "N": { "en": "New", "zh": "新建" },
+      "Z": { "en": "Undo", "zh": "撤销" },
+      "Y": { "en": "Redo", "zh": "重做" },
+      "A": { "en": "Select All", "zh": "全选" },
+      "C": { "en": "Copy", "zh": "复制" },
+      "V": { "en": "Paste", "zh": "粘贴" },
+      "X": { "en": "Cut", "zh": "剪切" },
+      "I": { "en": "Isolate Selection", "zh": "隔离选择" },
+      "L": { "en": "Select by Name", "zh": "按名称选择" }
+    },
+    "Ctrl+Shift": {
+      "S": { "en": "Save As", "zh": "另存为" },
+      "A": { "en": "Select Invert", "zh": "反选" },
+      "Z": { "en": "Zoom Extents All", "zh": "全部缩放到适合" }
+    },
+    "Alt": {
+      "W": { "en": "Maximize Viewport", "zh": "最大化视窗" },
+      "Q": { "en": "Isolate Selection", "zh": "隔离选择" }
+    },
+    "NoModifier": {
+      "Q": { "en": "Select Object", "zh": "选择对象" },
+      "W": { "en": "Move", "zh": "移动" },
+      "E": { "en": "Rotate", "zh": "旋转" },
+      "R": { "en": "Scale", "zh": "缩放" },
+      "G": { "en": "Hide Grids", "zh": "隐藏网格" },
+      "H": { "en": "Hide Selection", "zh": "隐藏选择" },
+      "F3": { "en": "Wireframe", "zh": "线框" },
+      "F4": { "en": "Edged Faces", "zh": "边线面" },
+      "F9": { "en": "Render", "zh": "渲染" },
+      "7": { "en": "Polygon Count", "zh": "多边形计数" },
+      "DELETE": { "en": "Delete", "zh": "删除" }
+    }
+  },
+
+  "MAYA.EXE": {
+    "Ctrl": {
+      "S": { "en": "Save", "zh": "保存" },
+      "O": { "en": "Open", "zh": "打开" },
+      "N": { "en": "New Scene", "zh": "新建场景" },
+      "Z": { "en": "Undo", "zh": "撤销" },
+      "Y": { "en": "Redo", "zh": "重做" },
+      "A": { "en": "Select All", "zh": "全选" },
+      "C": { "en": "Copy", "zh": "复制" },
+      "V": { "en": "Paste", "zh": "粘贴" },
+      "X": { "en": "Cut", "zh": "剪切" },
+      "D": { "en": "Duplicate", "zh": "复制" },
+      "G": { "en": "Repeat Last", "zh": "重复上次操作" }
+    },
+    "Ctrl+Shift": {
+      "S": { "en": "Save As", "zh": "另存为" },
+      "A": { "en": "Deselect All", "zh": "取消全选" },
+      "D": { "en": "Duplicate Special", "zh": "特殊复制" }
+    },
+    "Alt": {
+      "LMB": { "en": "Orbit", "zh": "环绕" },
+      "MMB": { "en": "Pan", "zh": "平移" },
+      "RMB": { "en": "Zoom", "zh": "缩放" }
+    },
+    "NoModifier": {
+      "Q": { "en": "Select Tool", "zh": "选择工具" },
+      "W": { "en": "Move Tool", "zh": "移动工具" },
+      "E": { "en": "Rotate Tool", "zh": "旋转工具" },
+      "R": { "en": "Scale Tool", "zh": "缩放工具" },
+      "F": { "en": "Frame Selected", "zh": "框选对象" },
+      "A": { "en": "Frame All", "zh": "框选全部" },
+      "G": { "en": "Repeat Tool", "zh": "重复工具" },
+      "4": { "en": "Wireframe", "zh": "线框" },
+      "5": { "en": "Shaded", "zh": "着色" },
+      "6": { "en": "Textured", "zh": "纹理" },
+      "7": { "en": "Lighted", "zh": "光照" },
+      "SPACE": { "en": "Hotbox", "zh": "热盒" }
+    }
+  },
+
+  "UNITY.EXE": {
+    "Ctrl": {
+      "S": { "en": "Save", "zh": "保存" },
+      "O": { "en": "Open Scene", "zh": "打开场景" },
+      "N": { "en": "New Scene", "zh": "新建场景" },
+      "Z": { "en": "Undo", "zh": "撤销" },
+      "Y": { "en": "Redo", "zh": "重做" },
+      "A": { "en": "Select All", "zh": "全选" },
+      "C": { "en": "Copy", "zh": "复制" },
+      "V": { "en": "Paste", "zh": "粘贴" },
+      "X": { "en": "Cut", "zh": "剪切" },
+      "D": { "en": "Duplicate", "zh": "复制" },
+      "P": { "en": "Play", "zh": "播放" }
+    },
+    "Ctrl+Shift": {
+      "S": { "en": "Save As", "zh": "另存为" },
+      "N": { "en": "New Game Object", "zh": "新建游戏对象" },
+      "C": { "en": "Create Empty Child", "zh": "创建空子对象" }
+    },
+    "Alt": {
+      "LMB": { "en": "Orbit", "zh": "环绕" },
+      "MMB": { "en": "Pan", "zh": "平移" },
+      "RMB": { "en": "Zoom", "zh": "缩放" }
+    },
+    "NoModifier": {
+      "Q": { "en": "Pan Tool", "zh": "平移工具" },
+      "W": { "en": "Move Tool", "zh": "移动工具" },
+      "E": { "en": "Rotate Tool", "zh": "旋转工具" },
+      "R": { "en": "Scale Tool", "zh": "缩放工具" },
+      "T": { "en": "Rect Tool", "zh": "矩形工具" },
+      "Y": { "en": "Transform Tool", "zh": "变换工具" },
+      "F": { "en": "Frame Selected", "zh": "框选对象" },
+      "SPACE": { "en": "Hand Tool", "zh": "抓手工具" },
+      "V": { "en": "Vertex Snap", "zh": "顶点捕捉" },
+      "X": { "en": "Toggle X-Ray", "zh": "切换X射线" },
+      "DELETE": { "en": "Delete", "zh": "删除" }
+    }
+  },
+
+  "UNREALEDITOR.EXE": {
+    "Ctrl": {
+      "S": { "en": "Save Current", "zh": "保存当前" },
+      "O": { "en": "Open Level", "zh": "打开关卡" },
+      "N": { "en": "New Level", "zh": "新建关卡" },
+      "Z": { "en": "Undo", "zh": "撤销" },
+      "Y": { "en": "Redo", "zh": "重做" },
+      "A": { "en": "Select All", "zh": "全选" },
+      "C": { "en": "Copy", "zh": "复制" },
+      "V": { "en": "Paste", "zh": "粘贴" },
+      "X": { "en": "Cut", "zh": "剪切" },
+      "D": { "en": "Duplicate", "zh": "复制" },
+      "W": { "en": "Duplicate Move", "zh": "复制移动" }
+    },
+    "Ctrl+Shift": {
+      "S": { "en": "Save All", "zh": "全部保存" },
+      "A": { "en": "Deselect All", "zh": "取消全选" }
+    },
+    "Alt": {
+      "LMB": { "en": "Orbit Camera", "zh": "环绕相机" },
+      "RMB": { "en": "Zoom Camera", "zh": "缩放相机" },
+      "MMB": { "en": "Pan Camera", "zh": "平移相机" }
+    },
+    "NoModifier": {
+      "Q": { "en": "Select Mode", "zh": "选择模式" },
+      "W": { "en": "Move Tool", "zh": "移动工具" },
+      "E": { "en": "Rotate Tool", "zh": "旋转工具" },
+      "R": { "en": "Scale Tool", "zh": "缩放工具" },
+      "F": { "en": "Focus Selected", "zh": "聚焦选中" },
+      "G": { "en": "Game Mode", "zh": "游戏模式" },
+      "P": { "en": "Play/Stop", "zh": "播放/停止" },
+      "SPACE": { "en": "Pause", "zh": "暂停" },
+      "DELETE": { "en": "Delete", "zh": "删除" },
+      "END": { "en": "Snap to Floor", "zh": "吸附到地面" },
+      "1": { "en": "Lit Mode", "zh": "光照模式" },
+      "2": { "en": "Unlit Mode", "zh": "无光照模式" },
+      "3": { "en": "Wireframe Mode", "zh": "线框模式" }
+    }
   }
 }
