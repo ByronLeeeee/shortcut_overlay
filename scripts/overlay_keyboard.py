@@ -17,8 +17,9 @@ from PySide6.QtWidgets import (
     QSizePolicy,
     QSizeGrip,
     QGraphicsOpacityEffect,
+    QApplication
 )
-from PySide6.QtCore import Qt, Slot, QPoint, QEvent
+from PySide6.QtCore import Qt, Slot, QPoint, QEvent, QTimer
 from PySide6.QtGui import QColor, QPalette, QMouseEvent, QResizeEvent, QShowEvent
 
 import win32gui
@@ -179,7 +180,13 @@ class OverlayKeyboardWindow(QWidget):
 
         self.init_ui()
         self.set_window_properties()
+        self._load_window_geometry()
         self.apply_current_settings()
+
+        self._geometry_save_timer = QTimer(self)
+        self._geometry_save_timer.setSingleShot(True)
+        self._geometry_save_timer.setInterval(500) # Save 500ms after the last change
+        self._geometry_save_timer.timeout.connect(self._save_window_geometry_to_config)
 
     def init_ui(self) -> None:
         """Initializes the UI elements, creating the keyboard layout."""
@@ -188,6 +195,7 @@ class OverlayKeyboardWindow(QWidget):
         self.keyboard_layout_container = QWidget()
         keyboard_grid_layout = QVBoxLayout(self.keyboard_layout_container)
         keyboard_grid_layout.setSpacing(3); keyboard_grid_layout.setContentsMargins(5,5,5,5)
+        self.setMinimumSize(600, 200)
 
         for row_keys in KEY_LAYOUT:
             row_layout = QHBoxLayout(); row_layout.setSpacing(3)
@@ -207,6 +215,58 @@ class OverlayKeyboardWindow(QWidget):
         size_grip_layout.addWidget(self.size_grip, 0, Qt.AlignBottom | Qt.AlignRight)
         self.main_layout.addLayout(size_grip_layout)
         self.setMinimumSize(600, 200); self.resize(850, 280)
+
+    def _load_window_geometry(self) -> None:
+        """Loads window position and size from config and applies them."""
+        x = self.config_manager.get_setting("window_x")
+        y = self.config_manager.get_setting("window_y")
+        width = self.config_manager.get_setting("window_width", 850) # Default if not found
+        height = self.config_manager.get_setting("window_height", 280) # Default if not found
+
+        # Only move if both x and y are valid (were previously saved)
+        if x is not None and y is not None:
+            screen_rect = QApplication.primaryScreen().availableGeometry()
+            if screen_rect.contains(x, y):
+                self.move(x, y)
+        
+        self.resize(width, height)
+
+    def _save_window_geometry_to_config(self) -> None:
+        """Saves the current window position and size to the configuration."""
+        if not self.isMinimized() and not self.isMaximized(): # Avoid saving invalid states
+            current_geo = self.geometry()
+            settings_to_update = {
+                "window_x": current_geo.x(),
+                "window_y": current_geo.y(),
+                "window_width": current_geo.width(),
+                "window_height": current_geo.height()
+            }
+            self.config_manager.update_settings(settings_to_update)
+            # print(f"Saved window geometry: {settings_to_update}") # Debug
+    
+    def save_geometry_on_quit(self) -> None:
+        """Ensures geometry is saved when application quits."""
+        if self._geometry_save_timer.isActive():
+            self._geometry_save_timer.stop() # Stop the timer to prevent it from firing later
+            self._save_window_geometry_to_config() # Save immediately
+        else:
+            self._save_window_geometry_to_config()
+
+    def moveEvent(self, event: QMouseEvent) -> None:
+        """
+        Handles window move events. Triggers a debounced save of geometry.
+        """
+        super().moveEvent(event)
+        if self.isVisible(): # Only save if window is visible and being interacted with
+            self._geometry_save_timer.start() # Restart debounce timer
+
+    def resizeEvent(self, event: QResizeEvent) -> None:
+        """
+        Handles window resize events. Triggers a debounced save of geometry.
+        """
+        super().resizeEvent(event)
+        if self.isVisible():
+            self._geometry_save_timer.start() # Restart debounce timer
 
     def set_window_properties(self) -> None:
         """Sets Qt window flags for overlay behavior (frameless, on-top, tool)."""
@@ -296,6 +356,7 @@ class OverlayKeyboardWindow(QWidget):
         """
         Updates shortcut descriptions on keys. If a shortcut is active due to
         current modifiers, its `shortcut_label` background is highlighted.
+        "NoModifier" shortcuts are only shown if no modifiers are active.
         """
         shortcut_fg_color = self._get_theme_shortcut_fg_color()
         highlight_bg_color = self._get_shortcut_highlight_bg_color()
@@ -303,18 +364,17 @@ class OverlayKeyboardWindow(QWidget):
         base_shortcut_label_style = (f"font-size: {DEFAULT_ORIGINAL_SHORTCUT_FONT_SIZE}pt; color: {shortcut_fg_color}; background-color: transparent; padding: 1px;")
         highlight_shortcut_label_style = (f"font-size: {DEFAULT_ORIGINAL_SHORTCUT_FONT_SIZE}pt; color: {shortcut_fg_color}; background-color: {highlight_bg_color}; border-radius: 2px; padding: 1px;")
 
-        # Reset all shortcut labels to their default (non-highlighted) style first.
+        # Reset all shortcut labels to their default text and style.
         for key_list in self.key_widgets_map.values():
             for widget in key_list:
-                widget.clear_shortcut_text()
-                widget.shortcut_label.setStyleSheet(base_shortcut_label_style)
+                widget.clear_shortcut_text() # Clears text and tooltip
+                widget.shortcut_label.setStyleSheet(base_shortcut_label_style) # Resets to non-highlighted
 
         app_shortcuts: Dict[str, Any] = self.config_manager.get_shortcuts_for_app(self.active_app_name)
         mod_combo_str: Optional[str] = self._get_current_modifier_string_for_config()
         current_lang_code: str = self.config_manager.get_setting("language", "en_US").split('_')[0]
         fallback_lang_code: str = "en" if current_lang_code != "en" else "zh"
 
-        # Helper to get the string description from a potentially localized object.
         def get_final_string_description(description_object: Any) -> str:
             if isinstance(description_object, str): return description_object
             if isinstance(description_object, dict):
@@ -322,34 +382,32 @@ class OverlayKeyboardWindow(QWidget):
                 if isinstance(text, str): return text
                 text = description_object.get(fallback_lang_code)
                 if isinstance(text, str): return text
-                try: # Fallback to the first value in the dict if it's a string
+                try:
                     first_value = next(iter(description_object.values()))
                     if isinstance(first_value, str): return first_value
-                except StopIteration: pass # Empty dictionary
-            return "N/A" # Default if no suitable string found
+                except StopIteration: pass
+            return "N/A"
 
-        # Process and highlight shortcuts active with current modifiers.
+        # If a modifier combination is active, display and highlight its shortcuts.
         if mod_combo_str and mod_combo_str in app_shortcuts:
             shortcuts_for_combo: Dict[str, Union[str, Dict[str, str]]] = app_shortcuts[mod_combo_str]
-            if shortcuts_for_combo: # Check if there are any shortcuts for this combo
+            if shortcuts_for_combo:
                 for key_char_upper, desc_obj in shortcuts_for_combo.items():
                     display_text = get_final_string_description(desc_obj)
                     if key_char_upper in self.key_widgets_map:
                         for widget in self.key_widgets_map[key_char_upper]:
                             widget.update_shortcut_display(display_text)
-                            # Apply highlight style as these are active due to modifiers.
                             widget.shortcut_label.setStyleSheet(highlight_shortcut_label_style)
-        
-        # Process "NoModifier" shortcuts, display them only if the key has no other shortcut shown.
-        no_modifier_key_name = "NoModifier"
-        if no_modifier_key_name in app_shortcuts:
-            shortcuts_no_modifier = app_shortcuts[no_modifier_key_name]
-            if shortcuts_no_modifier:
-                for key_char_upper, desc_obj in shortcuts_no_modifier.items():
-                    display_text = get_final_string_description(desc_obj)
-                    if key_char_upper in self.key_widgets_map:
-                        for widget in self.key_widgets_map[key_char_upper]:
-                            if not widget.shortcut_label.text(): 
+
+        elif not mod_combo_str: # Only show NoModifier if no other modifiers are active
+            no_modifier_key_name = "NoModifier"
+            if no_modifier_key_name in app_shortcuts:
+                shortcuts_no_modifier = app_shortcuts[no_modifier_key_name]
+                if shortcuts_no_modifier:
+                    for key_char_upper, desc_obj in shortcuts_no_modifier.items():
+                        display_text = get_final_string_description(desc_obj)
+                        if key_char_upper in self.key_widgets_map:
+                            for widget in self.key_widgets_map[key_char_upper]:
                                 widget.update_shortcut_display(display_text)
 
     

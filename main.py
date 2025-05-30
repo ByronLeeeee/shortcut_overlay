@@ -97,6 +97,8 @@ class ShortcutOverlayApplication(QApplication):
         self._initialize_tray_icon_object() # Create the QSystemTrayIcon object
         self._update_tray_icon_ui()         # Populate its UI elements.
 
+        self.aboutToQuit.connect(self.overlay_window.save_geometry_on_quit) # Save overlay geometry on quit.
+        
         # Connect signals and slots for inter-component communication.
         self.setup_connections()
 
