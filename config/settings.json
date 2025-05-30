@@ -1,7 +1,7 @@
 {
-  "theme_name": "Tokyo Night",
-  "opacity": 100,
-  "custom_bg_color": "#aa14141e",
+  "theme_name": "Default Dark",
+  "opacity": 60,
+  "custom_bg_color": "#aa6f16dd",
   "custom_key_color": "#cc32323c",
   "custom_text_color": "#ffffffff",
   "language": "zh_CN"
