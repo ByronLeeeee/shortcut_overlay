@@ -30,11 +30,11 @@
       "5": { "en": "1.5x Space", "zh": "1.5倍行距" },
       "[": { "en": "Dec Font", "zh": "减小字号" },
       "]": { "en": "Inc Font", "zh": "增大字号" },
-      "Enter": { "en": "Page Break", "zh": "分页符" },
-      "Home": { "en": "Line Start", "zh": "行首" },
-      "End": { "en": "Line End", "zh": "行尾" },
-      "PageUp": { "en": "Prev Screen", "zh": "上一屏" },
-      "PageDown": { "en": "Next Screen", "zh": "下一屏" }
+      "ENTER": { "en": "Page Break", "zh": "分页符" },
+      "HOME": { "en": "Line Start", "zh": "行首" },
+      "END": { "en": "Line End", "zh": "行尾" },
+      "PAGEUP": { "en": "Prev Screen", "zh": "上一屏" },
+      "PAGEDOWN": { "en": "Next Screen", "zh": "下一屏" }
     },
     "Ctrl+Shift": {
       "S": { "en": "Styles Pane", "zh": "样式窗格" },
@@ -47,8 +47,8 @@
       "T": { "en": "Decrease Indent", "zh": "减少缩进" },
       ">": { "en": "Inc Font", "zh": "增大字号" },
       "<": { "en": "Dec Font", "zh": "减小字号" },
-      "Home": { "en": "Doc Start", "zh": "文档开头" },
-      "End": { "en": "Doc End", "zh": "文档末尾" }
+      "HOME": { "en": "Doc Start", "zh": "文档开头" },
+      "END": { "en": "Doc End", "zh": "文档末尾" }
     },
     "Ctrl+Alt": {
       "V": { "en": "Paste Special", "zh": "选择性粘贴" },
@@ -61,7 +61,8 @@
       "P": { "en": "Layout Tab", "zh": "布局选项卡" },
       "R": { "en": "Review Tab", "zh": "审阅选项卡" },
       "W": { "en": "View Tab", "zh": "视图选项卡" }
-    }
+    },
+    "NoModifier": {}
   },
   "EXCEL.EXE": {
     "Ctrl": {
@@ -89,14 +90,15 @@
       "D": { "en": "Fill Down", "zh": "向下填充" },
       "R": { "en": "Fill Right", "zh": "向右填充" },
       ";": { "en": "Date", "zh": "当前日期" },
-      "PageDown": { "en": "Next Sheet", "zh": "下一工作表" },
-      "PageUp": { "en": "Prev Sheet", "zh": "上工作表" },
-      "Home": { "en": "To A1", "zh": "至A1" },
-      "End": { "en": "Last Cell", "zh": "数据末尾" },
-      "Left": { "en": "Move Left End", "zh": "移至行首数据" },
-      "Right": { "en": "Move Right End", "zh": "移至行尾数据" },
-      "Up": { "en": "Move Up End", "zh": "移至列首数据" },
-      "Down": { "en": "Move Down End", "zh": "移至列尾数据" }
+      "PAGEDOWN": { "en": "Next Sheet", "zh": "下一工作表" },
+      "PAGEUP": { "en": "Prev Sheet", "zh": "上工作表" },
+      "HOME": { "en": "To A1", "zh": "至A1" },
+      "END": { "en": "Last Cell", "zh": "数据末尾" },
+      "LEFT": { "en": "Move Left End", "zh": "移至行首数据" },
+      "RIGHT": { "en": "Move Right End", "zh": "移至行尾数据" },
+      "UP": { "en": "Move Up End", "zh": "移至列首数据" },
+      "DOWN": { "en": "Move Down End", "zh": "移至列尾数据" },
+      "SPACE": { "en": "Select Col", "zh": "选整列" }
     },
     "Ctrl+Shift": {
       "S": { "en": "Save As", "zh": "另存为" },
@@ -106,15 +108,15 @@
       "-": { "en": "Delete", "zh": "删除单元格" },
       "&": { "en": "Outline", "zh": "外边框" },
       "_": { "en": "No Border", "zh": "无边框" },
-      "Enter": { "en": "Array Formula", "zh": "数组公式" },
-      "Left": { "en": "Select Left End", "zh": "选至行首数据" },
-      "Right": { "en": "Select Right End", "zh": "选至行尾数据" },
-      "Up": { "en": "Select Up End", "zh": "选至列首数据" },
-      "Down": { "en": "Select Down End", "zh": "选至列尾数据" }
+      "ENTER": { "en": "Array Formula", "zh": "数组公式" },
+      "LEFT": { "en": "Select Left End", "zh": "选至行首数据" },
+      "RIGHT": { "en": "Select Right End", "zh": "选至行尾数据" },
+      "UP": { "en": "Select Up End", "zh": "选至列首数据" },
+      "DOWN": { "en": "Select Down End", "zh": "选至列尾数据" }
     },
-    "Shift+Space": { "": { "en": "Select Row", "zh": "选整行" } },
-    "Ctrl+Space": { "": { "en": "Select Col", "zh": "选整列" } },
-    "Alt+Enter": { "": { "en": "New Line", "zh": "单元格换行" } },
+    "Shift": {
+      "SPACE": { "en": "Select Row", "zh": "选整行" }
+    },
     "Alt": {
       "H": { "en": "Home Tab", "zh": "开始选项卡" },
       "N": { "en": "Insert Tab", "zh": "插入选项卡" },
@@ -122,13 +124,16 @@
       "M": { "en": "Formula Tab", "zh": "公式选项卡" },
       "A": { "en": "Data Tab", "zh": "数据选项卡" },
       "R": { "en": "Review Tab", "zh": "审阅选项卡" },
-      "W": { "en": "View Tab", "zh": "视图选项卡" }
+      "W": { "en": "View Tab", "zh": "视图选项卡" },
+      "ENTER": { "en": "New Line", "zh": "单元格换行" }
     },
-    "F2": { "": { "en": "Edit Cell", "zh": "编辑单元格" } },
-    "F4": { "": { "en": "Repeat/Ref", "zh": "重复/引用" } },
-    "F11": { "": { "en": "New Chart", "zh": "新图表" } },
-    "F12": { "": { "en": "Save As", "zh": "另存为" } },
-    "Delete": { "": { "en": "Clear", "zh": "清除内容" } }
+    "NoModifier": {
+      "F2": { "en": "Edit Cell", "zh": "编辑单元格" },
+      "F4": { "en": "Repeat/Ref", "zh": "重复/引用" },
+      "F11": { "en": "New Chart", "zh": "新图表" },
+      "F12": { "en": "Save As", "zh": "另存为" },
+      "DELETE": { "en": "Clear", "zh": "清除内容" }
+    }
   },
   "POWERPNT.EXE": {
     "Ctrl": {
@@ -177,7 +182,8 @@
       "S": { "en": "Slideshow Tab", "zh": "幻灯片放映选项卡" },
       "R": { "en": "Review Tab", "zh": "审阅选项卡" },
       "W": { "en": "View Tab", "zh": "视图选项卡" }
-    }
+    },
+    "NoModifier": {}
   },
   "WPSOFFICE.EXE": {
     "Ctrl": {
@@ -226,32 +232,34 @@
     },
     "Alt": {
       "F4": { "en": "Close App", "zh": "关闭程序" },
-      "Tab": { "en": "Switch Window", "zh": "切换窗口" },
-      "Enter": { "en": "Properties", "zh": "属性" }
+      "TAB": { "en": "Switch Window", "zh": "切换窗口" },
+      "ENTER": { "en": "Properties", "zh": "属性" }
     },
     "Shift": {
       "F3": { "en": "Change Case", "zh": "更改大小写" },
       "F5": { "en": "Go To", "zh": "定位到" },
-      "Enter": { "en": "Line Break", "zh": "换行符" }
+      "ENTER": { "en": "Line Break", "zh": "换行符" },
+      "TAB": { "en": "Outdent", "zh": "减少缩进" }
     },
-    "F1": { "": { "en": "Help", "zh": "帮助" } },
-    "F2": { "": { "en": "Rename", "zh": "重命名" } },
-    "F3": { "": { "en": "Find Next", "zh": "查找下一个" } },
-    "F4": { "": { "en": "Repeat Action", "zh": "重复操作" } },
-    "F5": { "": { "en": "Go To", "zh": "定位" } },
-    "F7": { "": { "en": "Spelling Check", "zh": "拼写检查" } },
-    "F8": { "": { "en": "Extend Selection", "zh": "扩展选择" } },
-    "F9": { "": { "en": "Update Fields", "zh": "更新域" } },
-    "F12": { "": { "en": "Save As", "zh": "另存为" } },
-    "Delete": { "": { "en": "Delete", "zh": "删除" } },
-    "Backspace": { "": { "en": "Backspace", "zh": "退格" } },
-    "Enter": { "": { "en": "New Line", "zh": "换行" } },
-    "Tab": { "": { "en": "Tab/Indent", "zh": "制表符/缩进" } },
-    "Shift+Tab": { "": { "en": "Outdent", "zh": "减少缩进" } },
-    "Home": { "": { "en": "Line Begin", "zh": "行首" } },
-    "End": { "": { "en": "Line End", "zh": "行尾" } },
-    "Page Up": { "": { "en": "Page Up", "zh": "上一页" } },
-    "Page Down": { "": { "en": "Page Down", "zh": "下一页" } }
+    "NoModifier": {
+      "F1": { "en": "Help", "zh": "帮助" },
+      "F2": { "en": "Rename", "zh": "重命名" },
+      "F3": { "en": "Find Next", "zh": "查找下一个" },
+      "F4": { "en": "Repeat Action", "zh": "重复操作" },
+      "F5": { "en": "Go To", "zh": "定位" },
+      "F7": { "en": "Spelling Check", "zh": "拼写检查" },
+      "F8": { "en": "Extend Selection", "zh": "扩展选择" },
+      "F9": { "en": "Update Fields", "zh": "更新域" },
+      "F12": { "en": "Save As", "zh": "另存为" },
+      "DELETE": { "en": "Delete", "zh": "删除" },
+      "BACKSPACE": { "en": "Backspace", "zh": "退格" },
+      "ENTER": { "en": "New Line", "zh": "换行" },
+      "TAB": { "en": "Tab/Indent", "zh": "制表符/缩进" },
+      "HOME": { "en": "Line Begin", "zh": "行首" },
+      "END": { "en": "Line End", "zh": "行尾" },
+      "PAGEUP": { "en": "Page Up", "zh": "上一页" },
+      "PAGEDOWN": { "en": "Page Down", "zh": "下一页" }
+    }
   },
   "ET.EXE": {
     "Ctrl": {
@@ -283,7 +291,7 @@
     "Ctrl+Shift": {
       "S": { "en": "Save As", "zh": "另存为" },
       "L": { "en": "Filter", "zh": "筛选" },
-      "Enter": { "en": "Array Formula", "zh": "数组公式" },
+      "ENTER": { "en": "Array Formula", "zh": "数组公式" },
       "+": { "en": "Insert Cells", "zh": "插入单元格" },
       "-": { "en": "Delete Cells", "zh": "删除单元格" },
       "9": { "en": "Unhide Rows", "zh": "取消隐藏行" },
@@ -303,35 +311,37 @@
     },
     "Alt": {
       "=": { "en": "Auto Sum", "zh": "自动求和" },
-      "Enter": { "en": "New Line in Cell", "zh": "单元格内换行" },
+      "ENTER": { "en": "New Line in Cell", "zh": "单元格内换行" },
       "F1": { "en": "Chart Wizard", "zh": "图表向导" },
       "F8": { "en": "Macro", "zh": "宏" },
       "F11": { "en": "New Chart", "zh": "新建图表" }
     },
     "Shift": {
-      "Space": { "en": "Select Row", "zh": "选择行" },
-      "Enter": { "en": "Move Up", "zh": "向上移动" },
-      "Tab": { "en": "Move Left", "zh": "向左移动" },
+      "SPACE": { "en": "Select Row", "zh": "选择行" },
+      "ENTER": { "en": "Move Up", "zh": "向上移动" },
+      "TAB": { "en": "Move Left", "zh": "向左移动" },
       "F2": { "en": "Add Comment", "zh": "添加批注" },
       "F10": { "en": "Context Menu", "zh": "右键菜单" },
       "F11": { "en": "New Sheet", "zh": "新建工作表" }
     },
-    "F1": { "": { "en": "Help", "zh": "帮助" } },
-    "F2": { "": { "en": "Edit Cell", "zh": "编辑单元格" } },
-    "F3": { "": { "en": "Paste Name", "zh": "粘贴名称" } },
-    "F4": { "": { "en": "Repeat Action", "zh": "重复操作" } },
-    "F5": { "": { "en": "Go To", "zh": "定位" } },
-    "F7": { "": { "en": "Spelling Check", "zh": "拼写检查" } },
-    "F8": { "": { "en": "Extend Mode", "zh": "扩展模式" } },
-    "F9": { "": { "en": "Calculate", "zh": "计算" } },
-    "F10": { "": { "en": "Menu Bar", "zh": "菜单栏" } },
-    "F11": { "": { "en": "Chart Sheet", "zh": "图表工作表" } },
-    "F12": { "": { "en": "Save As", "zh": "另存为" } },
-    "Space": { "": { "en": "Select Column", "zh": "选择列" } },
-    "Enter": { "": { "en": "Confirm/Move Down", "zh": "确认/向下移动" } },
-    "Tab": { "": { "en": "Move Right", "zh": "向右移动" } },
-    "Delete": { "": { "en": "Clear Content", "zh": "清除内容" } },
-    "Backspace": { "": { "en": "Clear/Move Left", "zh": "清除/向左移动" } }
+    "NoModifier": {
+      "F1": { "en": "Help", "zh": "帮助" },
+      "F2": { "en": "Edit Cell", "zh": "编辑单元格" },
+      "F3": { "en": "Paste Name", "zh": "粘贴名称" },
+      "F4": { "en": "Repeat Action", "zh": "重复操作" },
+      "F5": { "en": "Go To", "zh": "定位" },
+      "F7": { "en": "Spelling Check", "zh": "拼写检查" },
+      "F8": { "en": "Extend Mode", "zh": "扩展模式" },
+      "F9": { "en": "Calculate", "zh": "计算" },
+      "F10": { "en": "Menu Bar", "zh": "菜单栏" },
+      "F11": { "en": "Chart Sheet", "zh": "图表工作表" },
+      "F12": { "en": "Save As", "zh": "另存为" },
+      "SPACE": { "en": "Select Column", "zh": "选择列" }, 
+      "ENTER": { "en": "Confirm/Move Down", "zh": "确认/向下移动" },
+      "TAB": { "en": "Move Right", "zh": "向右移动" },
+      "DELETE": { "en": "Clear Content", "zh": "清除内容" },
+      "BACKSPACE": { "en": "Clear/Move Left", "zh": "清除/向左移动" }
+    }
   },
   "WPP.EXE": {
     "Ctrl": {
@@ -373,31 +383,33 @@
     },
     "Alt": {
       "F4": { "en": "Close App", "zh": "关闭程序" },
-      "Tab": { "en": "Switch Window", "zh": "切换窗口" },
+      "TAB": { "en": "Switch Window", "zh": "切换窗口" },
       "F5": { "en": "Slideshow", "zh": "幻灯片放映" }
     },
     "Shift": {
       "F3": { "en": "Change Case", "zh": "更改大小写" },
       "F5": { "en": "Slideshow from Start", "zh": "从头开始放映" },
-      "Tab": { "en": "Previous Object", "zh": "上一个对象" }
+      "TAB": { "en": "Previous Object", "zh": "上一个对象" }
     },
-    "F1": { "": { "en": "Help", "zh": "帮助" } },
-    "F2": { "": { "en": "Rename", "zh": "重命名" } },
-    "F3": { "": { "en": "Find Next", "zh": "查找下一个" } },
-    "F4": { "": { "en": "Repeat Action", "zh": "重复操作" } },
-    "F5": { "": { "en": "Start Slideshow", "zh": "开始放映" } },
-    "F6": { "": { "en": "Next Pane", "zh": "下一窗格" } },
-    "F7": { "": { "en": "Spelling Check", "zh": "拼写检查" } },
-    "F12": { "": { "en": "Save As", "zh": "另存为" } },
-    "Tab": { "": { "en": "Next Object", "zh": "下一个对象" } },
-    "Enter": { "": { "en": "New Line", "zh": "换行" } },
-    "Delete": { "": { "en": "Delete", "zh": "删除" } },
-    "Backspace": { "": { "en": "Delete Slide", "zh": "删除幻灯片" } },
-    "Page Up": { "": { "en": "Previous Slide", "zh": "上一张幻灯片" } },
-    "Page Down": { "": { "en": "Next Slide", "zh": "下一张幻灯片" } },
-    "Home": { "": { "en": "First Slide", "zh": "第一张幻灯片" } },
-    "End": { "": { "en": "Last Slide", "zh": "最后一张幻灯片" } },
-    "Esc": { "": { "en": "End Slideshow", "zh": "结束放映" } }
+    "NoModifier": {
+      "F1": { "en": "Help", "zh": "帮助" },
+      "F2": { "en": "Rename", "zh": "重命名" },
+      "F3": { "en": "Find Next", "zh": "查找下一个" },
+      "F4": { "en": "Repeat Action", "zh": "重复操作" },
+      "F5": { "en": "Start Slideshow", "zh": "开始放映" },
+      "F6": { "en": "Next Pane", "zh": "下一窗格" },
+      "F7": { "en": "Spelling Check", "zh": "拼写检查" },
+      "F12": { "en": "Save As", "zh": "另存为" },
+      "TAB": { "en": "Next Object", "zh": "下一个对象" },
+      "ENTER": { "en": "New Line", "zh": "换行" }, 
+      "DELETE": { "en": "Delete", "zh": "删除" },
+      "BACKSPACE": { "en": "Delete Slide", "zh": "删除幻灯片" }, 
+      "PAGEUP": { "en": "Previous Slide", "zh": "上一张幻灯片" },
+      "PAGEDOWN": { "en": "Next Slide", "zh": "下一张幻灯片" },
+      "HOME": { "en": "First Slide", "zh": "第一张幻灯片" },
+      "END": { "en": "Last Slide", "zh": "最后一张幻灯片" },
+      "ESC": { "en": "End Slideshow", "zh": "结束放映" }
+    }
   },
   "PHOTOSHOP.EXE": {
     "Ctrl": {
@@ -445,22 +457,24 @@
       "F6": { "en": "Feather", "zh": "羽化" },
       "F7": { "en": "Inverse", "zh": "反选" }
     },
-    "V": { "": { "en": "Move", "zh": "移动" } },
-    "M": { "": { "en": "Marquee", "zh": "选框" } },
-    "L": { "": { "en": "Lasso", "zh": "套索" } },
-    "W": { "": { "en": "Magic Wand", "zh": "魔棒" } },
-    "C": { "": { "en": "Crop", "zh": "裁剪" } },
-    "B": { "": { "en": "Brush", "zh": "画笔" } },
-    "S": { "": { "en": "Stamp", "zh": "图章" } },
-    "E": { "": { "en": "Eraser", "zh": "橡皮擦" } },
-    "G": { "": { "en": "Gradient", "zh": "渐变" } },
-    "P": { "": { "en": "Pen", "zh": "钢笔" } },
-    "T": { "": { "en": "Type", "zh": "文字" } },
-    "H": { "": { "en": "Hand", "zh": "抓手" } },
-    "Z": { "": { "en": "Zoom", "zh": "缩放" } },
-    "D": { "": { "en": "Def Colors", "zh": "默认颜色" } },
-    "X": { "": { "en": "Swap Colors", "zh": "切换颜色" } },
-    "Space": { "": { "en": "Hand (temp)", "zh": "抓手(临时)" } }
+    "NoModifier": {
+      "V": { "en": "Move", "zh": "移动" },
+      "M": { "en": "Marquee", "zh": "选框" },
+      "L": { "en": "Lasso", "zh": "套索" },
+      "W": { "en": "Magic Wand", "zh": "魔棒" },
+      "C": { "en": "Crop", "zh": "裁剪" },
+      "B": { "en": "Brush", "zh": "画笔" },
+      "S": { "en": "Stamp", "zh": "图章" },
+      "E": { "en": "Eraser", "zh": "橡皮擦" },
+      "G": { "en": "Gradient", "zh": "渐变" },
+      "P": { "en": "Pen", "zh": "钢笔" },
+      "T": { "en": "Type", "zh": "文字" },
+      "H": { "en": "Hand", "zh": "抓手" },
+      "Z": { "en": "Zoom", "zh": "缩放" },
+      "D": { "en": "Def Colors", "zh": "默认颜色" },
+      "X": { "en": "Swap Colors", "zh": "切换颜色" },
+      "SPACE": { "en": "Hand (temp)", "zh": "抓手(临时)" }
+    }
   },
   "OUTLOOK.EXE": {
     "Ctrl": {
@@ -488,7 +502,8 @@
       "2": { "en": "Go Calendar", "zh": "转到日历" },
       "3": { "en": "Go Contacts", "zh": "转到联系人" },
       "4": { "en": "Go Tasks", "zh": "转到任务" },
-      "Enter": { "en": "Send", "zh": "发送" }
+      "ENTER": { "en": "Send", "zh": "发送" },
+      "DELETE": { "en": "Archive", "zh": "存档" }
     },
     "Ctrl+Shift": {
       "M": { "en": "New Email", "zh": "新邮件" },
@@ -513,12 +528,15 @@
       "H": { "en": "Home Tab", "zh": "开始选项卡" },
       "N": { "en": "Send Tab", "zh": "发送选项卡" }
     },
-    "F9": { "": { "en": "Send/Recv", "zh": "发送接收" } },
-    "F3": { "": { "en": "Find", "zh": "查找" } },
-    "Delete": { "": { "en": "Delete Item", "zh": "删除" } },
-    "Shift+Delete": { "": { "en": "Permanent Delete", "zh": "永久删除" } },
-    "Ctrl+Delete": { "": { "en": "Archive", "zh": "存档" } },
-    "Esc": { "": { "en": "Cancel", "zh": "取消" } }
+    "Shift": {
+        "DELETE": { "en": "Permanent Delete", "zh": "永久删除" }
+    },
+    "NoModifier": {
+      "F9": { "en": "Send/Recv", "zh": "发送接收" },
+      "F3": { "en": "Find", "zh": "查找" },
+      "DELETE": { "en": "Delete Item", "zh": "删除" },
+      "ESC": { "en": "Cancel", "zh": "取消" }
+    }
   },
   "NOTEPAD.EXE": {
     "Ctrl": {
@@ -550,7 +568,8 @@
       "O": { "en": "Format Menu", "zh": "格式菜单" },
       "V": { "en": "View Menu", "zh": "查看菜单" },
       "H": { "en": "Help Menu", "zh": "帮助菜单" }
-    }
+    },
+    "NoModifier": {}
   },
   "ACRORD32.EXE": {
     "Ctrl": {
@@ -572,10 +591,12 @@
       "-": { "en": "Rotate CCW", "zh": "逆时针旋转" },
       "N": { "en": "Go to Page", "zh": "转到页面" }
     },
-    "PageUp": { "": { "en": "Prev Page", "zh": "上一页" } },
-    "PageDown": { "": { "en": "Next Page", "zh": "下一页" } },
-    "Home": { "": { "en": "First Page", "zh": "首页" } },
-    "End": { "": { "en": "Last Page", "zh": "末页" } }
+    "NoModifier": {
+      "PAGEUP": { "en": "Prev Page", "zh": "上一页" },
+      "PAGEDOWN": { "en": "Next Page", "zh": "下一页" },
+      "HOME": { "en": "First Page", "zh": "首页" },
+      "END": { "en": "Last Page", "zh": "末页" }
+    }
   },
   "CHROME.EXE": {
     "Ctrl": {
@@ -595,33 +616,35 @@
       "+": { "en": "Zoom In", "zh": "放大" },
       "-": { "en": "Zoom Out", "zh": "缩小" },
       "0": { "en": "Reset Zoom", "zh": "重置缩放" },
-      "Tab": { "en": "Next Elem", "zh": "下个元素" },
-      "PageDown": { "en": "Scroll Down", "zh": "向下滚动" },
-      "PageUp": { "en": "Scroll Up", "zh": "向上滚动" },
-      "Home": { "en": "Page Top", "zh": "页顶" },
-      "End": { "en": "Page End", "zh": "页尾" }
+      "TAB": { "en": "Next Elem", "zh": "下个标签" },
+      "PAGEDOWN": { "en": "Scroll Down", "zh": "向下滚动" },
+      "PAGEUP": { "en": "Scroll Up", "zh": "向上滚动" },
+      "HOME": { "en": "Page Top", "zh": "页顶" },
+      "END": { "en": "Page End", "zh": "页尾" }
     },
     "Ctrl+Shift": {
       "N": { "en": "Incognito", "zh": "无痕窗口" },
       "T": { "en": "Reopen Tab", "zh": "重开标签" },
       "W": { "en": "Close Win", "zh": "关窗口" },
-      "Delete": { "en": "Clear Data", "zh": "清除数据" },
+      "DELETE": { "en": "Clear Data", "zh": "清除数据" },
       "B": { "en": "Bookmarks Bar", "zh": "书签栏" },
       "I": { "en": "Dev Tools", "zh": "开发者工具" },
       "J": { "en": "Dev Console", "zh": "开发者控制台" },
       "C": { "en": "Dev Inspect", "zh": "开发者检查" }
     },
     "Alt": {
-      "Left": { "en": "Back", "zh": "后退" },
-      "Right": { "en": "Forward", "zh": "前进" },
-      "Home": { "en": "Homepage", "zh": "主页" }
+      "LEFT": { "en": "Back", "zh": "后退" },
+      "RIGHT": { "en": "Forward", "zh": "前进" },
+      "HOME": { "en": "Homepage", "zh": "主页" }
     },
-    "F1": { "": { "en": "Help", "zh": "帮助" } },
-    "F5": { "": { "en": "Reload", "zh": "刷新" } },
-    "F6": { "": { "en": "Cycle Focus", "zh": "切换焦点" } },
-    "F11": { "": { "en": "Full Screen", "zh": "全屏" } },
-    "F12": { "": { "en": "Dev Tools", "zh": "开发者工具" } },
-    "Esc": { "": { "en": "Stop Load", "zh": "停止加载" } }
+    "NoModifier": {
+      "F1": { "en": "Help", "zh": "帮助" },
+      "F5": { "en": "Reload", "zh": "刷新" },
+      "F6": { "en": "Cycle Focus", "zh": "切换焦点" },
+      "F11": { "en": "Full Screen", "zh": "全屏" },
+      "F12": { "en": "Dev Tools", "zh": "开发者工具" },
+      "ESC": { "en": "Stop Load", "zh": "停止加载" }
+    }
   },
   "CODE.EXE": {
     "Ctrl": {
@@ -641,7 +664,7 @@
       "P": { "en": "Cmd Palette", "zh": "命令面板" },
       "B": { "en": "Sidebar", "zh": "侧边栏" },
       "/": { "en": "Line Comment", "zh": "行注释" },
-      "Space": { "en": "Suggest", "zh": "建议" }
+      "SPACE": { "en": "Suggest", "zh": "建议" }
     },
     "Ctrl+Shift": {
       "S": { "en": "Save All", "zh": "全保存" },
@@ -657,20 +680,24 @@
     },
     "Ctrl+K Ctrl+S": { "": { "en": "Shortcuts", "zh": "快捷方式" } },
     "Alt": {
-      "Up": { "en": "Move Line Up", "zh": "上移行" },
-      "Down": { "en": "Move Line Dn", "zh": "下移行" }
+      "UP": { "en": "Move Line Up", "zh": "上移行" },
+      "DOWN": { "en": "Move Line Dn", "zh": "下移行" }
     },
     "Shift+Alt": {
       "F": { "en": "Format Doc", "zh": "格式化" },
-      "Up": { "en": "Copy Line Up", "zh": "上复制行" },
-      "Down": { "en": "Copy Line Dn", "zh": "下复制行" }
+      "UP": { "en": "Copy Line Up", "zh": "上复制行" },
+      "DOWN": { "en": "Copy Line Dn", "zh": "下复制行" }
     },
-    "F1": { "": { "en": "Cmd Palette", "zh": "命令面板" } },
-    "F2": { "": { "en": "Rename Sym", "zh": "重命名符号" } },
-    "F5": { "": { "en": "Debug", "zh": "调试" } },
-    "F8": { "": { "en": "Next Error", "zh": "下个错误" } },
-    "F12": { "": { "en": "Go to Def", "zh": "转到定义" } },
-    "Shift+F12": { "": { "en": "Show Refs", "zh": "显示引用" } }
+    "NoModifier": {
+      "F1": { "en": "Cmd Palette", "zh": "命令面板" },
+      "F2": { "en": "Rename Sym", "zh": "重命名符号" },
+      "F5": { "en": "Debug", "zh": "调试" },
+      "F8": { "en": "Next Error", "zh": "下个错误" },
+      "F12": { "en": "Go to Def", "zh": "转到定义" }
+    },
+    "Shift": { 
+        "F12": { "en": "Show Refs", "zh": "显示引用" }
+    }
   },
   "EXPLORER.EXE": {
     "Ctrl": {
@@ -691,107 +718,102 @@
     "Ctrl+Shift": {
       "N": { "en": "New Folder", "zh": "新文件夹" },
       "E": { "en": "Expand All", "zh": "展开所有" },
-      "6": { "en": "Maximize", "zh": "最大化" },
+      "6": { "en": "Maximize", "zh": "最大化" }, 
       "1": { "en": "Details View", "zh": "详细信息视图" },
       "2": { "en": "List View", "zh": "列表视图" },
       "3": { "en": "Medium Icons", "zh": "中等图标" },
       "4": { "en": "Large Icons", "zh": "大图标" }
     },
     "Alt": {
-      "Enter": { "en": "Properties", "zh": "属性" },
-      "Up": { "en": "Up Level", "zh": "上一级" },
-      "Left": { "en": "Back", "zh": "后退" },
-      "Right": { "en": "Forward", "zh": "前进" },
+      "ENTER": { "en": "Properties", "zh": "属性" },
+      "UP": { "en": "Up Level", "zh": "上一级" },
+      "LEFT": { "en": "Back", "zh": "后退" },
+      "RIGHT": { "en": "Forward", "zh": "前进" },
       "D": { "en": "Focus Address", "zh": "焦点地址栏" }
     },
-    "F2": { "": { "en": "Rename", "zh": "重命名" } },
-    "F3": { "": { "en": "Search", "zh": "搜索" } },
-    "F4": { "": { "en": "Addr List", "zh": "地址栏列表" } },
-    "F5": { "": { "en": "Refresh", "zh": "刷新" } },
-    "F6": { "": { "en": "Cycle Panes", "zh": "切换窗格" } },
-    "F10": { "": { "en": "Menu Bar", "zh": "菜单栏" } },
-    "F11": { "": { "en": "Full Screen", "zh": "全屏" } },
-    "Shift+Delete": { "": { "en": "Del Permanent", "zh": "永久删除" } },
-    "Backspace": { "": { "en": "Up/Back", "zh": "上一级/后退" } },
-    "Home": { "": { "en": "Go Home", "zh": "转到主页" } }
+    "Shift": {
+        "DELETE": { "en": "Del Permanent", "zh": "永久删除" }
+    },
+    "NoModifier" : {
+      "F2": {  "en": "Rename", "zh": "重命名"  },
+      "F3": {  "en": "Search", "zh": "搜索"  },
+      "F4": {  "en": "Addr List", "zh": "地址栏列表"  },
+      "F5": {  "en": "Refresh", "zh": "刷新" } ,
+      "F6": {  "en": "Cycle Panes", "zh": "切换窗格" } ,
+      "F10": {  "en": "Menu Bar", "zh": "菜单栏" } ,
+      "F11": {  "en": "Full Screen", "zh": "全屏" } ,
+      "BACKSPACE": {  "en": "Up/Back", "zh": "上一级/后退" } ,
+      "HOME": {  "en": "Go Home", "zh": "转到主页" } 
+    }
   },
   "DEFAULT": {
     "Ctrl": {
-      "C": { "en": "Copy", "zh": "复制" },
-      "V": { "en": "Paste", "zh": "粘贴" },
-      "X": { "en": "Cut", "zh": "剪切" },
-      "Z": { "en": "Undo", "zh": "撤销" },
-      "Y": { "en": "Redo", "zh": "重做" },
-      "A": { "en": "Select All", "zh": "全选" },
-      "S": { "en": "Save", "zh": "保存" },
-      "O": { "en": "Open", "zh": "打开" },
-      "N": { "en": "New", "zh": "新建" },
-      "P": { "en": "Print", "zh": "打印" },
-      "F": { "en": "Find", "zh": "查找" },
-      "W": { "en": "Close Tab", "zh": "关标签页" },
-      "T": { "en": "New Tab", "zh": "新标签页" },
-      "R": { "en": "Refresh", "zh": "刷新" }
+      "C": { "en": "Copy", "zh": "复制" }, "V": { "en": "Paste", "zh": "粘贴" },
+      "X": { "en": "Cut", "zh": "剪切" }, "Z": { "en": "Undo", "zh": "撤销" },
+      "Y": { "en": "Redo", "zh": "重做" }, "A": { "en": "Select All", "zh": "全选" },
+      "S": { "en": "Save", "zh": "保存" }, "O": { "en": "Open", "zh": "打开" },
+      "N": { "en": "New", "zh": "新建" }, "P": { "en": "Print", "zh": "打印" },
+      "F": { "en": "Find", "zh": "查找" }, "W": { "en": "Close Tab", "zh": "关标签页" },
+      "T": { "en": "New Tab", "zh": "新标签页" }, "R": { "en": "Refresh", "zh": "刷新" }
     },
     "Ctrl+Shift": {
       "Z": { "en": "Redo", "zh": "重做" },
       "T": { "en": "Reopen Tab", "zh": "重新打开标签页" },
       "N": { "en": "New Private", "zh": "新建隐私窗口" },
-      "Esc": { "en": "Task Manager", "zh": "任务管理器" }
+      "ESC": { "en": "Task Manager", "zh": "任务管理器" }
     },
     "Alt": {
       "F4": { "en": "Close Win", "zh": "关程序" },
-      "Tab": { "en": "Switch Win", "zh": "切换窗口" },
-      "Esc": { "en": "Cycle Win (Rev)", "zh": "反向切换" },
-      "Enter": { "en": "Properties", "zh": "属性" },
-      "Space": { "en": "System Menu", "zh": "系统菜单" }
+      "TAB": { "en": "Switch Win", "zh": "切换窗口" },
+      "ESC": { "en": "Cycle Win (Rev)", "zh": "反向切换" },
+      "ENTER": { "en": "Properties", "zh": "属性" },
+      "SPACE": { "en": "System Menu", "zh": "系统菜单" },
+      "PRTSC": { "en": "Copy Active Win", "zh": "复制活动窗" }
     },
     "Ctrl+Alt": {
-      "Delete": { "en": "Security Screen", "zh": "安全界面" },
+      "DELETE": { "en": "Security Screen", "zh": "安全界面" },
       "T": { "en": "Task Manager", "zh": "任务管理器" }
     },
     "Win": {
-      "D": { "en": "Desktop", "zh": "桌面" },
-      "L": { "en": "Lock", "zh": "锁屏" },
-      "R": { "en": "Run", "zh": "运行" },
-      "E": { "en": "Explorer", "zh": "文件资源管理器" },
-      "I": { "en": "Settings", "zh": "设置" },
-      "X": { "en": "Quick Link", "zh": "快捷菜单" },
-      "Tab": { "en": "Task View", "zh": "任务视图" },
-      "PrintScreen": { "en": "Save Scrnsht", "zh": "存截图" },
+      "D": { "en": "Desktop", "zh": "桌面" }, "L": { "en": "Lock", "zh": "锁屏" },
+      "R": { "en": "Run", "zh": "运行" }, "E": { "en": "Explorer", "zh": "文件资源管理器" },
+      "I": { "en": "Settings", "zh": "设置" }, "X": { "en": "Quick Link", "zh": "快捷菜单" },
+      "TAB": { "en": "Task View", "zh": "任务视图" },
+      "PRTSC": { "en": "Save Scrnsht", "zh": "存截图" }, 
       "A": { "en": "Action Center", "zh": "操作中心" },
       "V": { "en": "Clipboard", "zh": "剪贴板历史" },
-      "S": { "en": "Search", "zh": "搜索" },
-      "U": { "en": "Ease of Access", "zh": "轻松访问" },
-      "K": { "en": "Connect", "zh": "连接" },
-      "P": { "en": "Project", "zh": "投影" },
-      "G": { "en": "Game Bar", "zh": "游戏栏" },
-      "H": { "en": "Dictation", "zh": "听写" },
-      "Pause": { "en": "System Info", "zh": "系统信息" },
-      "Home": { "en": "Start", "zh": "开始菜单" }
+      "S": { "en": "Search", "zh": "搜索" }, "U": { "en": "Ease of Access", "zh": "轻松访问" },
+      "K": { "en": "Connect", "zh": "连接" }, "P": { "en": "Project", "zh": "投影" },
+      "G": { "en": "Game Bar", "zh": "游戏栏" }, "H": { "en": "Dictation", "zh": "听写" },
+      "PAUSE": { "en": "System Info", "zh": "系统信息" }, 
+      "HOME": { "en": "Start", "zh": "开始菜单" }
     },
     "Win+Shift": {
       "S": { "en": "Screen Snip", "zh": "屏幕截图" },
-      "Left": { "en": "Move Left Monitor", "zh": "移至左显示器" },
-      "Right": { "en": "Move Right Monitor", "zh": "移至右显示器" }
+      "LEFT": { "en": "Move Left Monitor", "zh": "移至左显示器" },
+      "RIGHT": { "en": "Move Right Monitor", "zh": "移至右显示器" }
     },
     "Win+Ctrl": {
       "D": { "en": "New Desktop", "zh": "新建桌面" },
       "F4": { "en": "Close Desktop", "zh": "关闭桌面" },
-      "Left": { "en": "Switch Left Desktop", "zh": "切换左桌面" },
-      "Right": { "en": "Switch Right Desktop", "zh": "切换右桌面" }
+      "LEFT": { "en": "Switch Left Desktop", "zh": "切换左桌面" },
+      "RIGHT": { "en": "Switch Right Desktop", "zh": "切换右桌面" }
     },
-    "F1": { "": { "en": "Help", "zh": "帮助" } },
-    "F2": { "": { "en": "Rename", "zh": "重命名" } },
-    "F3": { "": { "en": "Find Next", "zh": "查找下一个" } },
-    "F5": { "": { "en": "Refresh", "zh": "刷新" } },
-    "F11": { "": { "en": "Full Screen", "zh": "全屏" } },
-    "F12": { "": { "en": "Dev Tools", "zh": "开发者工具" } },
-    "PrintScreen": { "": { "en": "Copy Scrnsht", "zh": "复制截图" } },
-    "Alt+PrintScreen": { "": { "en": "Copy Active Win", "zh": "复制活动窗" } },
-    "Delete": { "": { "en": "Delete", "zh": "删除" } },
-    "Enter": { "": { "en": "Confirm", "zh": "确认" } },
-    "Esc": { "": { "en": "Cancel/Close", "zh": "取消/关闭" } },
-    "Tab": { "": { "en": "Next Field", "zh": "下个字段" } },
-    "Shift+Tab": { "": { "en": "Prev Field", "zh": "上个字段" } }
+    "NoModifier": { 
+      "F1": { "en": "Help", "zh": "帮助" } ,
+      "F2": {  "en": "Rename", "zh": "重命名" } ,
+      "F3": {  "en": "Find Next", "zh": "查找下一个" } ,
+      "F5": {  "en": "Refresh", "zh": "刷新" },
+      "F11": {  "en": "Full Screen", "zh": "全屏"  },
+      "F12": {  "en": "Dev Tools", "zh": "开发者工具"  },
+      "PRTSC": {  "en": "Copy Scrnsht", "zh": "复制截图"  },
+      "DELETE": {  "en": "Delete", "zh": "删除"  },
+      "ENTER": {  "en": "Confirm", "zh": "确认"  },
+      "ESC": {  "en": "Cancel/Close", "zh": "取消/关闭"  },
+      "TAB": {  "en": "Next Field", "zh": "下个字段"  }
+    },
+    "Shift": { 
+        "TAB": { "en": "Prev Field", "zh": "上个字段" }
+    }
   }
 }
